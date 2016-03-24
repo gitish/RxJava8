@@ -1,0 +1,44 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.5
+version = '1.0'
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Quickstart',
+                   'Implementation-Version': version
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'commons-collections', name: 'commons-collections', version: '3.2'
+	compile "io.dropwizard:dropwizard-core:0.7.0"
+	compile "org.mongodb:mongo-java-driver:3.0.1"
+	compile 'io.reactivex:rxjava:1.1.2'
+	
+	testCompile "junit:junit:4.+"
+	testCompile "org.mockito:mockito-all:1.9.5"
+	testCompile "io.dropwizard:dropwizard-testing:0.7.0"
+}
+
+mainClassName = 'com.shl.service.App'
+
+run {
+	args 'server','local.yml'
+}
+
+test {
+    systemProperties 'property': 'value'
+}
+
+uploadArchives {
+    repositories {
+       flatDir {
+           dirs 'repos'
+       }
+    }
+}

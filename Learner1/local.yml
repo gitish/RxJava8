@@ -1,0 +1,8 @@
+server:
+  applicationConnectors:
+    - type: http
+      port: 8096
+mongo.nodes: 
+- localhost
+mongo.port: 27017
+mongo.db: quiz

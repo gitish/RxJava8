@@ -13,7 +13,7 @@
 |   Learning3       | It is an example of SpringBoot and Java8 features along with couchbase      |
 ### Execution Setp
 - Checkout code (git clone ..)
-- Import code in eclipse [assuming gradle is installed or ecplise has gradle plugins] (existing gradle project)
+- Import code in eclipse (existing gradle project) assuming gradle is installed or ecplise has gradle plugins 
 - Refresh gradle dependencies (Ctrl+f5)
 - Run test case (You may need to install/run mongoDB, Couchbase etc)
 
